@@ -1,4 +1,7 @@
 # typescript-webpack-react-rx-boilerplate
+# !!NOT COMPLETED YET!!
+## Inspired by [pepaar/typescript-webpack-react-flux-boilerplate](https://github.com/pepaar/typescript-webpack-react-flux-boilerplate)
+
 This boilerplate combines:
 * [Typescript](https://github.com/Microsoft/TypeScript)
 * [Babel](https://babeljs.io/)
