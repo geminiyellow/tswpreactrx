@@ -4,3 +4,6 @@
 /// <reference path="react/react.d.ts" />
 /// <reference path="react/react-dom.d.ts" />
 /// <reference path="react/react-addons-test-utils.d.ts" />
+/// <reference path="rx/rx-lite.d.ts" />
+/// <reference path="rx/rx.d.ts" />
+/// <reference path="react-rx-component/react-rx-component.d.ts" />
