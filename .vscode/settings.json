@@ -1,5 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
+	"editor.wrappingColumn": 90,
 	// Controls if the editor will insert spaces for tabs. Accepted values:  "auto", true, false. If set to "auto", the value will be guessed when a file is opened.
 	"editor.insertSpaces": true,
 
@@ -15,5 +18,5 @@
     "files.trimTrailingWhitespace": true,
 
     // Specifies the folder path containing the tsserver and lib*.d.ts files to use.
-	"typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
