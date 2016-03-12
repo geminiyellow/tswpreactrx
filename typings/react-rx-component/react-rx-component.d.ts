@@ -6,7 +6,7 @@
 
 declare module ReactRxComponent {
 
-      export function createRxComponent<T>(mapProps: (props: Rx.Observable<T>) => Rx.Observable<{}>, renderOrComponent: (props: any) => JSX.Element): any;
+      export function createRxComponent<T>(mapProps: (props: Rx.Observable<T>) => Rx.Observable<{}>, renderOrComponent: (props: any) => JSX.Element): __React.Component<{},{}>;
 
       export function funcSubject<T>(): Rx.Observable<T>;
 }

@@ -36,6 +36,10 @@ var config = {
       'react': path.join(nodeModulesPath, 'react', 'react.js'),
       'react-dom': path.join(nodeModulesPath, 'react-dom', 'dist', 'react-dom.js'),
       'flux': path.join(nodeModulesPath, 'flux', 'index.js'),
+/*
+      'rx': path.join(nodeModulesPath, 'rx', 'index.js'),
+      'react-rx-component': path.join(nodeModulesPath, 'react-rx-component', 'index.js'),
+*/
       'babel-polyfill': path.join(nodeModulesPath, 'babel-polyfill', 'lib', 'index.js'),
     }
   },

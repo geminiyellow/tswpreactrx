@@ -18,7 +18,7 @@ let counterView: (props: IProps) => JSX.Element = (props: IProps) => {
   );
 };
 
-const { CC }: JSX.ElementClass = createRxComponent<number>(
+const CC: () => React.Component<{}, {}> = () => createRxComponent<number>(
     (props$: Rx.Observable<{}>) => {
         const increment$: Rx.Observable<number> = funcSubject<number>();
         const count$: Rx.Observable<number> = increment$.startWith(0).scan<number>((count: number) => count + 1);
@@ -27,7 +27,7 @@ const { CC }: JSX.ElementClass = createRxComponent<number>(
             props$,
             count$,
             (props: {}, count: number) => (
-                { props, increment: increment$, count }
+                { increment: increment$, count }
             ));
     },
     counterView);
