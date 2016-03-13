@@ -21,8 +21,8 @@ let counterView: (props: IProps) => JSX.Element = (props: IProps) => {
 const CC: () => React.Component<{}, {}> = () => createRxComponent<number>(
     (props$: Rx.Observable<{}>) => {
         const increment$: Rx.Observable<number> = funcSubject<number>();
-        const accumulator: (acc: number, val: number) => number = (count: number, value: number) => count + 1;
-        const count$: Rx.Observable<number> = increment$.startWith(10).scan(accumulator);
+        const count$: Rx.Observable<number> = increment$.startWith(10).scan(
+            (acc: number, val: number) => acc + 1);
 
         return Rx.Observable.combineLatest<{}, number, {}>(
             props$,
