@@ -12,7 +12,7 @@ interface IProps {
 let counterView: (props: IProps) => JSX.Element = (props: IProps) => {
   return (
     <div>
-      <span>{props.count}</span>
+      <span>I like Rx {props.count} time{props.count ? "" : "s"}</span>
       <button onClick={props.increment}>Click me</button>
     </div>
   );
@@ -21,7 +21,8 @@ let counterView: (props: IProps) => JSX.Element = (props: IProps) => {
 const CC: () => React.Component<{}, {}> = () => createRxComponent<number>(
     (props$: Rx.Observable<{}>) => {
         const increment$: Rx.Observable<number> = funcSubject<number>();
-        const count$: Rx.Observable<number> = increment$.startWith(0).scan<number>((count: number) => count + 1);
+        const accumulator: (acc: number, val: number) => number = (count: number, value: number) => count + 1;
+        const count$: Rx.Observable<number> = increment$.startWith(10).scan(accumulator);
 
         return Rx.Observable.combineLatest<{}, number, {}>(
             props$,
